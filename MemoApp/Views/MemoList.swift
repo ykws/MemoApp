@@ -15,7 +15,9 @@ struct MemoList: View {
     NavigationView {
       VStack(alignment: .leading) {
         List(memoData.memos) { memo in
-          NavigationLink(destination: MemoDetail(memo: memo)) {
+          NavigationLink(destination: MemoDetail(memo: memo) { memo in
+            self.memoData.store(memo: memo)
+          }) {
             MemoRow(memo: memo)
           }
         }

@@ -9,17 +9,18 @@
 import SwiftUI
 
 struct MemoDetail: View {
-  var memo: Memo
+  @State var memo: Memo
+  var onSave: (Memo) -> ()
     
   var body: some View {
     VStack {
       ScrollView {
         VStack(alignment: .leading) {
-          Text(memo.title)
+          TextField("title", text: $memo.title)
             .font(.title)
             .padding(.bottom, 20)
           HStack {
-            Text(memo.body)
+            TextField("body", text: $memo.body)
               .font(.subheadline)
             Spacer()
           }
@@ -27,6 +28,9 @@ struct MemoDetail: View {
         }
         .padding()
       }
+    }
+    .onDisappear {
+      self.onSave(self.memo)
     }
   }
 }

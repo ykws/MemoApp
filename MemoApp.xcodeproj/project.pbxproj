@@ -17,7 +17,6 @@
 		089969CF248FDD5A00734137 /* MemoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089969CE248FDD5A00734137 /* MemoRow.swift */; };
 		089969D1248FDFF900734137 /* MemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089969D0248FDFF900734137 /* MemoList.swift */; };
 		089969D3248FE04A00734137 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089969D2248FE04A00734137 /* Data.swift */; };
-		089969D6248FE0A000734137 /* memoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 089969D5248FE0A000734137 /* memoData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		089969CE248FDD5A00734137 /* MemoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRow.swift; sourceTree = "<group>"; };
 		089969D0248FDFF900734137 /* MemoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoList.swift; sourceTree = "<group>"; };
 		089969D2248FE04A00734137 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		089969D5248FE0A000734137 /* memoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = memoData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 		089969B3248FD79B00734137 /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				089969D4248FE08400734137 /* Resources */,
 				089969C9248FD7C200734137 /* Views */,
 				089969C8248FD7B400734137 /* Models */,
 				089969B4248FD79B00734137 /* AppDelegate.swift */,
@@ -104,14 +101,6 @@
 				089969D0248FDFF900734137 /* MemoList.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		089969D4248FE08400734137 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				089969D5248FE0A000734137 /* memoData.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				089969C1248FD79E00734137 /* LaunchScreen.storyboard in Resources */,
-				089969D6248FE0A000734137 /* memoData.json in Resources */,
 				089969BE248FD79E00734137 /* Preview Assets.xcassets in Resources */,
 				089969BB248FD79E00734137 /* Assets.xcassets in Resources */,
 			);

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Memo: Hashable, Codable, Identifiable {
-    var id: Int
-    var title: String
-    var body: String
+  var id: Int
+  var title: String
+  var body: String
 }

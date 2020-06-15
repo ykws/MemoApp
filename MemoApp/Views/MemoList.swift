@@ -9,17 +9,21 @@
 import SwiftUI
 
 struct MemoList: View {
+  @EnvironmentObject var memoData: MemoData
+  
   var body: some View {
     NavigationView {
       VStack(alignment: .leading) {
-        List(memoData) { memo in
+        List(memoData.memos) { memo in
           NavigationLink(destination: MemoDetail(memo: memo)) {
             MemoRow(memo: memo)
           }
         }
         .navigationBarTitle(Text("MemoApp"))
                 
-        Button(action: { print("new") }) {
+        Button(action: {
+          self.memoData.store(memo: Memo())
+        }) {
           HStack {
             Image(systemName: "plus.circle.fill")
               .resizable()

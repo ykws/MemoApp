@@ -8,4 +8,14 @@
 
 import SwiftUI
 
-let memoData: [Memo] = []
+class MemoData: ObservableObject {
+  @Published var memos: [Memo] = []
+  
+  func store(memo: Memo) {
+    if let index = memos.firstIndex(where: { $0.id == memo.id }) {
+      memos[index] = memo
+    } else {
+      memos.insert(memo, at:0)
+    }
+  }
+}

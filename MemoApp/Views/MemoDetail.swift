@@ -31,8 +31,10 @@ struct MemoDetail: View {
   }
 }
 
+/*
 struct MemoDetail_Previews: PreviewProvider {
     static var previews: some View {
         MemoDetail(memo: memoData[0])
     }
 }
+ */

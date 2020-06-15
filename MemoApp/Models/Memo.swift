@@ -6,10 +6,10 @@
 //  Copyright © 2020 ykws. All rights reserved.
 //
 
-import SwiftUI
+import Foundation
 
 struct Memo: Hashable, Codable, Identifiable {
-  var id: Int
+  var id = UUID()
   var title: String
   var body: String
 }

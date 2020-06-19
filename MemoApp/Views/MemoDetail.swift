@@ -22,12 +22,12 @@ struct MemoDetail: View {
             self.onSave(self.memo)
           })
             .font(.title)
-            .padding(.bottom, 20)
           HStack {
             TextField("body", text: $memo.body, onEditingChanged: { _ in
               self.onSave(self.memo)
             })
               .font(.subheadline)
+              .padding(.top, 20)
             Spacer()
           }
           Spacer()

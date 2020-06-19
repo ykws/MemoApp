@@ -13,9 +13,24 @@ struct MemoRow: View {
     
   var body: some View {
     HStack {
-      Text(memo.title)
-        .padding(.leading, 20)
-      Spacer()
+      Image(systemName: "doc.plaintext")
+        .resizable()
+        .frame(width: 20, height: 20)
+        .padding(.leading, 10)
+      VStack(alignment: .leading) {
+        Text(memo.title)
+          .lineLimit(1)
+          .font(.headline)
+          .padding(.leading, 10)
+          .padding(.trailing, 20)
+        Text(memo.body)
+          .lineLimit(1)
+          .font(.subheadline)
+          .padding(.leading, 10)
+          .padding(.trailing, 20)
+          .padding(.top, 10)
+          .padding(.bottom, 10)
+      }
     }
   }
 }

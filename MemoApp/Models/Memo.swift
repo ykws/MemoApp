@@ -10,6 +10,6 @@ import Foundation
 
 struct Memo: Hashable, Codable, Identifiable {
   var id = UUID()
-  var title = "title"
-  var body = "body"
+  var title = "(No title)"
+  var body = ""
 }

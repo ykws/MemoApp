@@ -10,14 +10,17 @@ import SwiftUI
 
 struct MemoList: View {
   @EnvironmentObject var memoData: MemoData
-  
+  @State var editing: Memo?
+
   var body: some View {
     NavigationView {
       VStack(alignment: .leading) {
         List(memoData.memos) { memo in
-          NavigationLink(destination: MemoDetail(memo: memo) { memo in
+          NavigationLink(destination: MemoDetail(memo: memo, onSave: { memo in
             self.memoData.store(memo: memo)
-          }) {
+          }, onDelete: { memo in
+            self.memoData.remove(memo: memo)
+          })) {
             MemoRow(memo: memo)
           }
         }
@@ -26,14 +29,11 @@ struct MemoList: View {
         Button(action: {
           self.memoData.store(memo: Memo())
         }) {
-          HStack {
-            Image(systemName: "plus.circle.fill")
-              .resizable()
-              .frame(width: 20, height: 20)
-            Text("New memo")
-          }
+          Image(systemName: "plus.circle.fill")
+            .resizable()
+            .frame(width: 20, height: 20)
         }
-        .padding(.leading, 20)
+        .padding(20)
       }
     }
   }

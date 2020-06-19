@@ -18,4 +18,9 @@ class MemoData: ObservableObject {
       memos.insert(memo, at:0)
     }
   }
+  
+  func remove(memo: Memo) {
+    guard let index = memos.firstIndex(where: { $0.id == memo.id }) else { return }
+    memos.remove(at: index)
+  }
 }
